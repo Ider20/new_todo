@@ -72,7 +72,10 @@ export const Done: React.FC<DoneProps> = ({
           <span className="text-gray-400">{done.length}</span>
         </div>
         {done.map((list, index) => (
-          <div className="bg-white p-3 rounded-lg flex justify-between border border-stone-400 hover:scale-105 duration-300">
+          <div
+            key={index}
+            className="bg-white p-3 rounded-lg flex justify-between border border-stone-400 hover:scale-105 duration-300"
+          >
             <i className="fa-solid fa-circle-check"></i>
             <div className="w-[180px] flex flex-col gap-3">
               <div className="font-bold">{list.title}</div>

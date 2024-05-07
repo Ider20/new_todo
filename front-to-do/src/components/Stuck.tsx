@@ -74,7 +74,10 @@ export const Stuck: React.FC<StuckProps> = ({
           <span className="text-gray-400">{Stuck.length}</span>
         </div>
         {Stuck.map((list, index) => (
-          <div className="bg-white p-3 rounded-lg flex justify-between border border-stone-400 hover:scale-105 duration-300">
+          <div
+            key={index}
+            className="bg-white p-3 rounded-lg flex justify-between border border-stone-400 hover:scale-105 duration-300"
+          >
             <button
               className="group flex justify-start"
               onClick={() => handleUpdateToDone(list._id)}
